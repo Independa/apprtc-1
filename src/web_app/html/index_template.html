@@ -150,6 +150,32 @@
       versionInfo: {{ version_info }},
     };
 
+    console.log("------------------------------------------");
+    console.log("Gabe rox, version 24");
+    console.log("------------------------------------------");
+    console.log('Enter try/catch');
+    try {
+      if (navigatorCordova !== undefined){
+        navigator.mediaDevices = {};
+        navigator.getUserMedia                  = navigatorCordova.getUserMedia;
+        navigator.webkitGetUserMedia            = navigatorCordova.getUserMedia;
+        navigator.mediaDevices.getUserMedia     = navigatorCordova.getUserMedia;
+        navigator.mediaDevices.enumerateDevices = navigatorCordova.enumerateDevices;
+        // console.log('window.RTCPeerConnection', window.RTCPeerConnection);
+        // window.RTCPeerConnection                = navigatorCordova.RTCPeerConnection;
+        // window.webkitRTCPeerConnection          = navigatorCordova.RTCPeerConnection;
+        // window.RTCSessionDescription            = navigatorCordova.RTCSessionDescription;
+        // window.RTCIceCandidate                  = navigatorCordova.RTCIceCandidate;
+        // window.MediaStream                      = navigatorCordova.MediaStream;
+        // window.webkitMediaStream                = navigatorCordova.MediaStream;
+        // window.MediaStreamTrack                 = navigatorCordova.MediaStreamTrack;
+        // console.log('We here, navigator =', navigator);
+      }
+    } catch(e) {
+      console.log('In try/catch, error =', e);
+    }
+    console.log('After try/catch');
+
     var appController;
 
     function initialize() {
